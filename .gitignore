@@ -1,0 +1,6 @@
+# phpstorm project files
+.idea
+
+# ignore frontend grunt tool's env
+node_modules
+.sass-cache

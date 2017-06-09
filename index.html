@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="http://cdn.e-lining.com/shop/lining/theme/xth2/images/headfooter/favicon.ico"/>
+    <title>2017李宁路跑联赛</title>
+    <style>
+        .loading-box{position:fixed;top:0;left:0;bottom:0;right:0;width:100%;height:100%;z-index:999;background-color:#000120}.loading-box .loading{position:absolute;top:40%;left:50%;transform:translateX(-50%);-webkit-transform:translateX(-50%);width:100px;height:50px;background-image:url(./src/images/loading_lemon.gif);background-position:center center;background-repeat:no-repeat;background-size:4rem}  .loading-box .bar{position:absolute;top:60%;left:50%;transform:translateX(-50%);-webkit-transform:translateX(-50%);width:200px;height:6px;border:1px solid #ffb400;border-radius:6px}  .loading-box .bar span{display:block;width:0;height:100%;background:#ffb400}  [title="站长统计"]{  display: none;  }
+    </style>
+    <link rel="stylesheet" href="src/dist/h5_preheating.css">
+</head>
+<body>
+<div class="loading-box">
+    <div class="loading"></div>
+    <div class="bar">
+        <span id="loadLine" style="width: 0;"></span>
+    </div>
+</div>
+<audio id="music" style="display: none;" preload controls="controls" loop="loop" src="./src/audio/h5_preheating.mp3">
+    您的浏览器不支持audio
+</audio>
+<a href="javascript:;" class="audio-box J-audio-control">
+    <div class="audio"></div>
+</a>
+<div id="fullpage" style="display: none;">
+    <div class="section page page1">
+        <div class="wrapper">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page1/title_bg.png" alt="" class="js-animate animated title-bg" data-animate="fadeIn">
+            <div class="js-animate animated title-box" data-animate="fadeIn">
+                <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page1/title.png" alt="" class="js-animate animated title" data-animate="flash">
+            </div>
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page1/beijing.png" alt="" class="js-animate animated beijing" data-animate="fadeInRight">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page1/kunming.png" alt="" class="js-animate animated kunming" data-animate="fadeInLeft">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page1/people.png" alt="" class="js-animate animated people" data-animate="fadeInLeft">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page1/guangzhou.png" alt="" class="js-animate animated guangzhou" data-animate="fadeInRight">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page1/bottom5.png" alt="" class="js-animate animated bottom5" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page1/year.png" alt="" class="js-animate animated year" data-animate="fadeInUp">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page1/desc.png" alt="" class="js-animate animated desc" data-animate="fadeIn">
+            <div class="js-animate animated up-arrow"  data-animate="fadeIn"><b></b></div>
+        </div>
+    </div>
+    <div class="section page page2">
+        <div class="wrapper">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/title.png" alt="" class="js-animate animated title" data-animate="bounceIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/title_2.png" alt="" class="js-animate animated title-desc"  data-animate="fadeInDown">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_0.png" alt="" class="js-animate animated map map0" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_1_beijing.png" alt="北京" class="js-animate animated map map1" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_2_shenguang.png" alt="深圳 广州" class="js-animate animated map map2" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_3_xian.png" alt="西安" class="js-animate animated map map3" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_4_chengdu.png" alt="成都" class="js-animate animated map map4" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_5_chongqing.png" alt="重庆" class="js-animate animated map map5" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_6_changchun.png" alt="长春" class="js-animate animated map map6" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_7_jiqing.png" alt="济南 青岛" class="js-animate animated map map7" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_8_kunming.png" alt="昆明" class="js-animate animated map map8" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_9_lanzhou.png" alt="兰州" class="js-animate animated map map9" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_10_shanghai.png" alt="上海" class="js-animate animated map map10" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_11_shenda.png" alt="沈阳 大连" class="js-animate animated map map11" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_12_taiyuan.png" alt="太原" class="js-animate animated map map12" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_13_wuhan.png" alt="武汉" class="js-animate animated map map13" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_14_xusu.png" alt="徐州 苏州" class="js-animate animated map map14" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_15_changsha.png" alt="长沙" class="js-animate animated map map15" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_16_zhenzhou.png" alt="郑州" class="js-animate animated map map16" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_desc_0.png" alt="" class="js-animate animated map-desc map-desc0" data-animate="fadeInDown">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_desc_1.png" alt="" class="js-animate animated map-desc map-desc1" data-animate="fadeInDown">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page2/map_desc_2.png" alt="" class="js-animate animated map-desc map-desc2" data-animate="fadeInDown">
+            <div class="js-animate animated up-arrow"  data-animate="fadeIn"><b></b></div>
+        </div>
+    </div>
+    <div class="section page page3">
+        <div class="wrapper">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page3/title.png" alt="" class="js-animate animated title"  data-animate="bounceIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page3/title_desc.png" alt="" class="js-animate animated title-desc"  data-animate="fadeInDown">
+            <div class="blue_males">
+                <div class="js-animate animated person" data-animate="fadeIn"></div>
+                <div class="js-animate animated person" data-animate="fadeIn"></div>
+                <div class="js-animate animated person" data-animate="fadeIn"></div>
+                <div class="js-animate animated person" data-animate="fadeIn"></div>
+                <div class="js-animate animated person" data-animate="fadeIn"></div>
+                <div class="js-animate animated person" data-animate="fadeIn"></div>
+            </div>
+            <div class="red_females">
+                <div class="js-animate animated person" data-animate="fadeIn"></div>
+                <div class="js-animate animated person" data-animate="fadeIn"></div>
+                <div class="js-animate animated person" data-animate="fadeIn"></div>
+                <div class="js-animate animated person" data-animate="fadeIn"></div>
+                <div class="dots">
+                    <span class="js-animate animated dot dot_blue" data-animate="fadeIn"></span>
+                    <span class="js-animate animated dot dot_red" data-animate="fadeIn"></span>
+                    <span class="js-animate animated dot dot_blue" data-animate="fadeIn"></span>
+                </div>
+            </div>
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page3/equal_symbol.png" alt="" class="js-animate animated equal-symbol" data-animate="fadeInDown">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page3/iceland.png" alt="" class="js-animate animated iceland" data-animate="flipInX">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page3/desc.png" alt="" class="js-animate animated desc" data-animate="fadeInDown">
+            <div class="js-animate animated up-arrow"  data-animate="fadeIn"><b></b></div>
+        </div>
+    </div>
+    <div class="section page page4">
+        <div class="wrapper">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page4/title.png" alt="" class="js-animate animated title"  data-animate="bounceIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page4/title_desc.png" alt="" class="js-animate animated title-desc"  data-animate="fadeInDown">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page3/equal_symbol.png" alt="" class="js-animate animated equal-symbol" data-animate="fadeInDown">
+            <div class="js-animate animated earth-box" data-animate="fadeIn">
+                <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page4/earth.png" alt="" class="js-animate animated earth" data-animate="jello">
+            </div>
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page4/desc0.png" alt="" class="js-animate animated desc desc0" data-animate="fadeIn">
+            <div class="js-animate animated moon-box" data-animate="fadeIn">
+                <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page4/moon.png" alt="" class="js-animate animated moon" data-animate="jello">
+            </div>
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page4/desc1.png" alt="" class="js-animate animated desc desc1" data-animate="fadeIn">
+            <div class="js-animate animated up-arrow"  data-animate="fadeIn"><b></b></div>
+        </div>
+    </div>
+    <div class="section page page5">
+        <div class="wrapper">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page5/title.png" alt="" class="js-animate animated title"  data-animate="bounceIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page5/title_desc.png" alt="" class="js-animate animated title-desc"  data-animate="fadeInDown">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page5/sweat.png" alt="" class="js-animate animated sweat" data-animate="fadeIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page5/male.png" alt="" class="js-animate animated person male" data-animate="fadeInLeft">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page5/female.png" alt="" class="js-animate animated person female" data-animate="fadeInLeft">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page5/desc.png" alt="" class="js-animate animated desc" data-animate="fadeInUp">
+            <div class="js-animate animated up-arrow"  data-animate="fadeIn"><b></b></div>
+        </div>
+    </div>
+    <div class="section page page6">
+        <div class="wrapper">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/title.png" alt="" class="js-animate animated title"  data-animate="bounceIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/title_desc.png" alt="" class="js-animate animated title-desc"  data-animate="fadeInDown">
+            <div class="js-animate animated flipster champion-box"  data-animate="fadeIn">
+                <ul>
+                    <li><img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/champion_1.jpg" alt="李宁"></li>
+                    <li><img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/champion_2.jpg" alt="李小鹏"></li>
+                    <li><img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/champion_3.jpg" alt="丁宁"></li>
+                    <li><img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/champion_4.jpg" alt="赵蕊蕊"></li>
+                    <li><img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/champion_5.jpg" alt="郭伟阳、罗玉通、杨景辉"></li>
+                    <li><img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/champion_6.jpg" alt="邓琳琳"></li>
+                    <li><img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/champion_7.jpg" alt="黄旭"></li>
+                    <li><img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/champion_8.jpg" alt="李珊珊"></li>
+                    <li><img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/champion_9.jpg" alt="李世鑫"></li>
+                    <li><img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/champion_10.jpg" alt="李小双、程菲、肖海亮"></li>
+                    <li><img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/champion_11.jpg" alt="彭勃"></li>
+                    <li><img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/champion_12.jpg" alt="钱红、杨凌"></li>
+                    <li><img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/champion_13.jpg" alt="王家超"></li>
+                    <li><img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/champion_14.jpg" alt="王明娟"></li>
+                    <li><img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page6/champion_15.jpg" alt="周吕鑫"></li>
+                </ul>
+            </div>
+            <div class="js-animate animated up-arrow"  data-animate="fadeIn"><b></b></div>
+        </div>
+    </div>
+    <div class="section page page7">
+        <div class="wrapper">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page7/title.png" alt="" class="js-animate animated title"  data-animate="bounceIn">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page7/title_desc.png" alt="" class="js-animate animated title-desc" data-animate="fadeInDown">
+            <div class="js-animate animated medal medal1" data-animate="fadeInUp">
+                <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page7/medal_1.jpg" alt="" >
+            </div>
+            <div class="js-animate animated medal medal2" data-animate="fadeInLeft">
+                <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page7/medal_2.jpg" alt="">
+            </div>
+            <div class="js-animate animated medal medal5" data-animate="fadeInDown">
+                <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page7/medal_5.jpg" alt="">
+            </div>
+            <div class="js-animate animated medal medal4" data-animate="fadeInRight">
+                <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page7/medal_4.jpg" alt="" >
+            </div>
+            <div class="js-animate animated medal medal3" data-animate="fadeIn">
+                <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page7/medal_3.jpg" alt="" >
+            </div>
+            <div class="js-animate animated up-arrow"  data-animate="fadeIn"><b></b></div>
+        </div>
+    </div>
+    <div class="section page page8">
+        <div class="wrapper">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page8/title.png" alt="" class="js-animate animated title" data-animate="fadeInDown">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page8/desc0.png" alt="" class="js-animate animated desc desc0" data-animate="fadeInDown">
+            <img data-src="https://10kfiles.runninglemon.com/10k/statics_10k/cdn/images/h5_preheating/page8/desc-1-3.png" alt="" class="js-animate animated desc desc1" data-animate="fadeIn">
+            <a href="https://10k.runninglemon.com/home/sign/index" class="js-animate animated btn" data-animate="fadeInUp"></a>
+        </div>
+    </div>
+</div>
+<div class="watermarker"></div>
+<div class="filter-box">
+    <p>在竖屏下浏览观感最佳</p>
+</div>
+
+<!--<script>var wxData = JSON.parse('<?php echo $signPackage;?>');</script>-->
+<!--<script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>-->
+<script src="src/dist/h5_preheating.min.js"></script>
+<script>
+    $(function(){
+//        wxShare.shareInfo.index = {
+//            title: '2017李宁路跑联赛一键报名',
+//            desc: '报名得跑鞋，完赛还返钱！',
+//            imgUrl: 'http://share.runninglemon.com/statics_10k/images/h5_preheating/share_icon.jpg',
+//            link: 'http://share.runninglemon.com/home/activity/preheating',
+//            share_btn_is_hidden: false
+//        };
+//        wxShare.sharePosition = 'index';
+//        wxData ? wxShare.init(function(){
+//            location.href = 'https://hd.faisco.cn/11609397/28/load.html?style=24';
+//        }) : '';
+
+        // 页面隐藏掉时, 关闭音乐
+        var visibilitychange = function () {
+            var tag = document.hidden || document.webkitHidden;
+            if(tag){
+                $('.J-audio-control').removeClass('open');
+                audio.pause();
+            }
+        };
+        document.addEventListener('visibilitychange', visibilitychange, false);
+        document.addEventListener('webkitvisibilitychange', visibilitychange, false);
+
+    });
+
+//    // 给app客户端的分享数据
+//    function getShareInfo(){
+//        var info = JSON.stringify(wxShare.shareInfo[wxShare.sharePosition]);
+//        var is_android = navigator.userAgent.indexOf('Android') > -1 || navigator.userAgent.indexOf('Adr') > -1;
+//        if(is_android){
+//            window.control.shareInfoCallBack(info);
+//        }else {
+//            return info;
+//        }
+//    }
+</script>
+
+<!--<script src="//s4.cnzz.com/z_stat.php?id=1261353592&web_id=1261353592" language="JavaScript"></script>-->
+</body>
+</html>

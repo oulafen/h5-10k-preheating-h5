@@ -1,0 +1,683 @@
+@charset "UTF-8";
+@import "fullpage";
+@import "flipster";
+@import "animate";
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  background-color: rgb(0, 1, 32);
+  background-image: url(../images/bg_1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@mixin animateDelay($sec){
+  animation-delay: $sec;
+  -webkit-animation-delay: $sec;
+}
+.audio-box{
+  position: fixed;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  right: 10px;
+  top: 10px;
+  z-index: 99;
+  text-align: right;
+  .audio{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(../images/audio_close.png) center no-repeat;
+    background-size: contain;
+  }
+  &.open{
+    .audio{
+      background: url(../images/audio_open.png) center no-repeat;
+      background-size: contain;
+    }
+  }
+}
+.page{
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  .wrapper{
+    width: 375px;
+    height: 600px;
+    transform: translateX(-50%) scale(1);
+    -webkit-transform: translateX(-50%) scale(1);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    padding: 30px 0;
+    box-sizing: border-box;
+  }
+  .title{
+    width: 288px;
+    margin-top: -15px;
+    @include animateDelay(200ms);
+  }
+  .title-desc{
+    margin-top: 22px;
+    @include animateDelay(300ms);
+  }
+  .up-arrow{
+    position: fixed;
+    left: 50%;
+    margin-left: -20px;
+    bottom: -3px;
+    width: 40px;
+    height: 30px;
+    opacity: 0;
+    b{
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      margin-left: -15px;
+      width: 30px;
+      height: 19px;
+      background: url(../images/arrow.png);
+      background-size: 100% 100%;
+      -webkit-animation: start 1s infinite ease-in-out;
+      animation: start 1s infinite ease-in-out;
+    }
+  }
+}
+.page1{
+  .title-bg{
+    @include animateDelay(200ms);
+    width: 313px;
+    height: 129px;
+  }
+  .title-box{
+    @include animateDelay(400ms);
+    width: 264px;
+    position: absolute;
+    left: 50%;
+    margin-left: -132px;
+    top: 76px;
+    .title{
+      @include animateDelay(1200ms);
+      width: 264px;
+    }
+  }
+
+  .beijing{
+    @include animateDelay(1500ms);
+    width: 161px;
+    position: absolute;
+    right: 0;
+    top: 130px;
+  }
+  .kunming{
+    @include animateDelay(1000ms);
+    width: 98px;
+    position: absolute;
+    left: 0;
+    top: 253px;
+  }
+  .people{
+    @include animateDelay(1000ms);
+    width: 56px;
+    position: absolute;
+    left: 50%;
+    top: 367px;
+    margin-left: -28px;
+  }
+  .guangzhou{
+    @include animateDelay(1400ms);
+    width: 125px;
+    position: absolute;
+    right: 0;
+    top: 370px;
+  }
+
+  .bottom5{
+    @include animateDelay(1000ms);
+    width: 375px;
+    position: absolute;
+    left: 0;
+    top: 231px;
+  }
+  .year{
+    @include animateDelay(1000ms);
+    width: 340px;
+    position: absolute;
+    left: 50%;
+    margin-left: -170px;
+    top: 273px;
+  }
+  .desc{
+    @include animateDelay(2200ms);
+    position: absolute;
+    width: 210px;
+    top: 540px;
+    margin-left: -105px;
+    left: 50%;
+  }
+  .up-arrow{
+    @include animateDelay(2200ms);
+  }
+}
+.page2{
+  $page2Dur: 250ms;
+  $page2Inter: 800ms;
+  .title-desc{
+    width: 266px;
+  }
+  .map{
+    position: absolute;
+    width: 332px;
+    left: 50%;
+    margin-left: -166px;
+    top: 150px;
+    &.map0{@include animateDelay($page2Inter + $page2Dur * 1);}
+    &.map1{@include animateDelay($page2Inter + $page2Dur * 2);}
+    &.map2{@include animateDelay($page2Inter + $page2Dur * 3);}
+    &.map3{@include animateDelay($page2Inter + $page2Dur * 4);}
+    &.map4{@include animateDelay($page2Inter + $page2Dur * 5);}
+    &.map5{@include animateDelay($page2Inter + $page2Dur * 6);}
+    &.map6{@include animateDelay($page2Inter + $page2Dur * 7);}
+    &.map7{@include animateDelay($page2Inter + $page2Dur * 8);}
+    &.map8{@include animateDelay($page2Inter + $page2Dur * 9);}
+    &.map9{@include animateDelay($page2Inter + $page2Dur * 10);}
+    &.map10{@include animateDelay($page2Inter + $page2Dur * 11);}
+    &.map11{@include animateDelay($page2Inter + $page2Dur * 12);}
+    &.map12{@include animateDelay($page2Inter + $page2Dur * 13);}
+    &.map13{@include animateDelay($page2Inter + $page2Dur * 14);}
+    &.map14{@include animateDelay($page2Inter + $page2Dur * 15);}
+    &.map15{@include animateDelay($page2Inter + $page2Dur * 16);}
+    &.map16{@include animateDelay($page2Inter + $page2Dur * 17);}
+  }
+  .map-desc{
+    width: 255px;
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    margin-left: -127.5px;
+    &.map-desc0{
+      top: 470px;
+      @include animateDelay($page2Inter + $page2Dur * 6);
+    }
+    &.map-desc1{
+      top: 490px;
+      @include animateDelay($page2Inter + $page2Dur * 11);
+    }
+    &.map-desc2{
+      top: 512px;
+      @include animateDelay($page2Inter + $page2Dur * 16);
+    }
+  }
+  .up-arrow{
+    @include animateDelay($page2Inter + $page2Dur * 18);
+  }
+}
+.page3{
+  $page3Dur: 200ms;
+  .title-desc{
+    width: 176px;
+  }
+  .person{
+    width: 35px;
+    height: 31px;
+    float: left;
+  }
+  .blue_males, .red_females{
+    width: 210px;
+    height: 31px;
+    position: absolute;
+    left: 50%;
+    margin-left: -105px;
+  }
+  .blue_males{
+    top: 140px;
+    .person{
+      background: url(../images/person_blue.png) center no-repeat;
+      background-size: contain;
+    }
+    .person:nth-child(1){@include animateDelay($page3Dur * 1);}
+    .person:nth-child(2){@include animateDelay($page3Dur * 2);}
+    .person:nth-child(3){@include animateDelay($page3Dur * 3);}
+    .person:nth-child(4){@include animateDelay($page3Dur * 4);}
+    .person:nth-child(5){@include animateDelay($page3Dur * 5);}
+    .person:nth-child(6){@include animateDelay($page3Dur * 6);}
+  }
+  .red_females{
+    top: 181px;
+    .person{
+      background: url(../images/person_red.png) center no-repeat;
+      background-size: contain;
+    }
+    .person:nth-child(1){@include animateDelay($page3Dur * 6.9);}
+    .person:nth-child(2){@include animateDelay($page3Dur * 7.7);}
+    .person:nth-child(3){@include animateDelay($page3Dur * 8.4);}
+    .person:nth-child(4){@include animateDelay($page3Dur * 9.0);}
+    .dots{
+      @include animateDelay($page3Dur * 10.5);
+      line-height: 31px;
+      .dot{
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        &.dot_blue{
+          background-color: rgb(29, 133, 255);
+        }
+        &.dot_red{
+          background-color: rgb(255, 82, 82);
+        }
+        &:nth-child(1){@include animateDelay($page3Dur * 11);}
+        &:nth-child(2){@include animateDelay($page3Dur * 12);}
+        &:nth-child(3){@include animateDelay($page3Dur * 13);}
+      }
+    }
+  }
+  .equal-symbol{
+    @include animateDelay($page3Dur * 15);
+    width: 55px;
+    position: absolute;
+    left: 50%;
+    margin-left: -27.5px;
+    top: 241px;
+  }
+  .iceland{
+    @include animateDelay($page3Dur * 17);
+    width: 297px;
+    position: absolute;
+    top: 296px;
+    left: 50%;
+    margin-left: -155px;
+  }
+  .desc{
+    @include animateDelay($page3Dur * 19);
+    position: absolute;
+    top: 500px;
+    width: 147px;
+    left: 50%;
+    margin-left: -73.5px;
+  }
+  .up-arrow{
+    @include animateDelay($page3Dur * 20);
+  }
+}
+.page4{
+  $page4Dur: 300ms;
+  .title-desc{
+    width: 167px;
+  }
+  .equal-symbol{
+    @include animateDelay($page4Dur * 3);
+    width: 55px;
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    margin-left: -27.5px;
+  }
+  .earth-box{
+    @include animateDelay($page4Dur * 4);
+    width: 274px;
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    margin-left: -137px;
+    .earth{
+      @include animateDelay($page4Dur * 4);
+      width: 274px;
+    }
+  }
+  .moon-box{
+    @include animateDelay($page4Dur * 6);
+    width: 283px;
+    position: absolute;
+    top: 360px;
+    left: 50%;
+    margin-left: -142.1px;
+    .moon{
+      @include animateDelay($page4Dur * 6);
+      width: 283px;
+    }
+  }
+
+  .desc{
+    width: 188px;
+    position: absolute;
+    left: 50%;
+    margin-left: -94px;
+    &.desc0{
+      @include animateDelay($page4Dur * 5);
+      top: 300px;
+    }
+    &.desc1{
+      @include animateDelay($page4Dur * 7);
+      top: 500px;
+    }
+  }
+  .up-arrow{
+    @include animateDelay($page4Dur * 9);
+  }
+}
+.page5{
+  $page5Dur: 300ms;
+  .title-desc{
+    width: 264px;
+  }
+  .person{
+    height: 262px;
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    &.male{
+      @include animateDelay($page5Dur * 3);
+      margin-left: -150px;
+    }
+    &.female{
+      @include animateDelay($page5Dur * 2);
+      margin-left: -10px;
+    }
+  }
+  .desc{
+    @include animateDelay($page5Dur * 4);
+    width: 293px;
+    position: absolute;
+    top: 465px;
+    left: 50%;
+    margin-left: -146.5px;
+  }
+  .sweat{
+    @include animateDelay($page5Dur * 4);
+    width: 302px;
+    position: absolute;
+    left: 50%;
+    margin-left: -160px;
+    top: 246px;
+  }
+  .up-arrow{
+    @include animateDelay($page5Dur * 7);
+  }
+}
+.page6{
+  .title-desc{
+    width: 281px;
+  }
+  .champion-box{
+    @include animateDelay(700ms);
+    margin-top: 50px;
+    img{
+      width: 190px;
+      height: 320px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.5);
+    }
+    .flipto-prev, .flipto-next{
+      position: absolute;
+      margin-top: -160px;
+      z-index: 9;
+      display: inline-block;
+      width: 36px;
+      height: 26px;
+      background: url(../images/arrow_left.png) center no-repeat;
+      background-size: contain;
+      &.flipto-prev{
+        left: 5px;
+      }
+      &.flipto-next{
+        right: 5px;
+        transform: rotate(-180deg);
+        -webkit-transform: rotate(-180deg);
+      }
+    }
+  }
+  .up-arrow{
+    @include animateDelay(1500ms);
+  }
+
+}
+.page7{
+  $page7Dur: 200ms;
+  .title-desc{
+    width: 287px;
+  }
+  .medal{
+    width: 171px;
+    position: absolute;
+    left: 50%;
+    img{
+      width: 171px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px #666;
+    }
+    &.medal1{
+      @include animateDelay($page7Dur * 2);
+      top: 180px;
+      margin-left: -144px;
+      img{
+        transform: rotate(-15deg);
+      }
+    }
+    &.medal2{
+      @include animateDelay($page7Dur * 4);
+      top: 200px;
+      margin-left: -24px;
+      img{
+        transform: rotate(11deg);
+      }
+    }
+    &.medal3{
+      @include animateDelay($page7Dur * 10);
+      top: 265px;
+      margin-left: -90px;
+    }
+    &.medal4{
+      @include animateDelay($page7Dur * 8);
+      top: 326px;
+      margin-left: -164px;
+      img{
+        transform: rotate(20deg);
+      }
+    }
+    &.medal5{
+      @include animateDelay($page7Dur * 6);
+      top: 354px;
+      margin-left: -28px;
+      img{
+        transform: rotate(-9deg);
+      }
+    }
+  }
+  .up-arrow{
+    @include animateDelay($page7Dur * 14);
+  }
+}
+.page8{
+  $page8Dur: 200ms;
+  background-image:url(../images/bg_2.jpg) ;
+  background-position: center center;
+  .title{
+    @include animateDelay($page8Dur * 1);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 292px;
+    margin-left: -146px;
+    margin-top: 12px;
+  }
+  .desc{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    &.desc0{
+      @include animateDelay($page8Dur * 2);
+      top: 70px;
+      width: 318px;
+      margin-left: -162px;
+    }
+    &.desc1{
+      @include animateDelay($page8Dur * 4);
+      width: 350px;
+      margin-top: 0;
+      margin-left: -175px;
+      top: 46%;
+    }
+  }
+  .btn{
+    @include animateDelay($page8Dur * 4);
+    display: inline-block;
+    position: absolute;
+    width: 247px;
+    height:55px;
+    background: url(../images/sign_btn.png) center no-repeat;
+    background-size: contain;
+    left: 50%;
+    margin-left: -123.5px;
+    top: 534px;
+  }
+}
+.watermarker{
+  position: fixed;
+  bottom: 8px;
+  right: 7px;
+  width: 53px;
+  height: 39px;
+  background: url(../images/watermarker.png) center no-repeat;
+  background-size: contain;
+}
+.filter-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #000120;
+  color: #fff;
+  display: none;
+  p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    margin-left: -90px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+}
+
+/* 箭头 */
+@-webkit-keyframes arrow_down {
+  0% {
+    -webkit-transform:rotate(-180deg) translate(0,6px);
+  }
+  50% {
+    -webkit-transform:rotate(-180deg) translate(0,0);
+  }
+  100% {
+    -webkit-transform:rotate(-180deg) translate(0, 6px);
+  }
+}
+@keyframes arrow_down {
+  0% {
+    transform:rotate(-180deg) translate(0,6px);
+  }
+  50% {
+    transform: rotate(-180deg) translate(0,0);
+  }
+  100% {
+    transform:rotate(-180deg) translate(0, 6px);
+  }
+}
+
+/* 箭头 */
+@-webkit-keyframes start {
+  0%{
+    -webkit-transform: translate(0,5px);
+  }
+  50% {
+    -webkit-transform: translate(0,0);
+  }
+  100% {
+    -webkit-transform: translate(0, 5px);
+  }
+}
+@keyframes start {
+  0% {
+    transform: translate(0,5px);
+  }
+  60% {
+    transform: translate(0,0);
+  }
+  100% {
+    transform: translate(0, 5px);
+  }
+}
+.start{
+  position: fixed;
+  left: 50%;
+  margin-left: -20px;
+  bottom: 10px;
+  width: 40px;
+  height: 30px;
+}
+.start b{
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  width: 30px;
+  height: 19px;
+  background: url(../images/arrow.png);
+  background-size: 100% 100%;
+  -webkit-animation: start 1s infinite ease-in-out;
+  animation: start 1s infinite ease-in-out;
+}
+@-webkit-keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0.6;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+
+@media screen and (orientation: portrait) {
+  /*竖屏 css*/
+  .filter-box{
+    display: none;
+  }
+}
+@media screen and (orientation: landscape) {
+  /*横屏 css*/
+  .filter-box{
+    display: block;
+  }
+}
